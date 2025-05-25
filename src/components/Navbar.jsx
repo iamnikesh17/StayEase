@@ -2,6 +2,7 @@ import { assets } from "@/assets/assets";
 import { useClerk, useUser, UserButton } from "@clerk/clerk-react";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import HotelReg from "./HotelReg";
 
 const BookIcon = () => (
   <svg
@@ -100,6 +101,8 @@ const Navbar = () => {
         >
           Dashboard
         </button>
+
+        <HotelReg isScrolled={isScrolled}/>
       </div>
 
       {/* Desktop Right */}

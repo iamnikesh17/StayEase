@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import { useLocation } from "react-router-dom"
 import AllRoutes from "./routes/AllRoutes"
 import Footer from "./components/Footer"
+import HotelReg from "./components/HotelReg"
 
 
 
@@ -12,7 +13,9 @@ function App() {
     <div>
       {!isOwnerPath && <Navbar/>}
       <AllRoutes/>
-      <Footer/>
+      {
+        !isOwnerPath && <Footer/>
+      }
     </div>
   )
 }
